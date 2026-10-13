@@ -1,0 +1,14 @@
+sequenceDiagram
+  actor Player
+  participant CLI as Client CLI
+  participant API as Client API
+  participant Server as Server Core
+  participant Account as Account Module
+  Player->>CLI: Enter LOGIN command
+  CLI->>API: clientLogin(name)
+  API->>Server: LOGIN name
+  Server->>Account: Validate identity and policy
+  Account-->>Server: Accepted or rejected
+  Server-->>API: OK LOGIN or ERR
+  API-->>CLI: Render response
+  CLI-->>Player: Show status

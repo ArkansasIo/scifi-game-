@@ -1,0 +1,6 @@
+[client]
+host=127.0.0.1
+port=27666
+timeout_seconds=5
+color_enabled=1
+auto_reconnect=0
