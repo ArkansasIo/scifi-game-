@@ -11,11 +11,15 @@ differed in exact counts and rules.
 - Starbases replenish energy and torpedoes when the Enterprise is adjacent.
 
 ## Commands
-- `NAV dx dy`: move by sector offsets; quadrant crossing costs extra energy and one stardate.\n- `WARP course factor`: move along one of eight compass courses, with warp factor 1–8; energy cost is 8 × factor². Course numbers: 1=N, 2=NE, 3=E, 4=SE, 5=S, 6=SW, 7=W, 8=NW.
+- `NAV dx dy`: move by sector offsets; quadrant crossing costs extra energy and one stardate.
+- `WARP course factor`: move along one of eight compass courses, with warp factor 1–8; energy cost is 8 × factor² plus one 25-energy surcharge if a quadrant boundary is crossed. Course numbers: 1=N, 2=NE, 3=E, 4=SE, 5=S, 6=SW, 7=W, 8=NW.
 - `SRS`: current quadrant sector scan.
-- `LRS`: local 3 × 3 quadrant KBS scan.\n- `DAM`: damage-control report; combat can damage ship systems.\n- `COM option`: library computer reports (0–5: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map).
+- `LRS`: local 3 × 3 quadrant KBS scan.
+- `DAM`: damage-control report; combat can damage ship systems.
+- `COM option`: library computer reports (0–5: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map).
 - `PHA energy`: spend energy on phasers against local Klingons.
-- `TOR row col`: fire at a sector in the current quadrant (coordinates 1–8).\n- `TORC course`: fire a torpedo along a compass course until it hits an object or leaves the quadrant.
+- `TOR row col`: fire at a sector in the current quadrant (coordinates 1–8).
+- `TORC course`: fire a torpedo along a compass course until it hits an object or leaves the quadrant.
 - `SHE energy`: transfer energy into shields.
 - `DOCK`: resupply at a nearby starbase.
 - `STATUS`, `HELP`, `QUIT`: status, help, abandon mission.
