@@ -79,7 +79,8 @@ $sources = @(
     "src/game/scheduler.c++",
     "src/game/gameplay.c++",
     "src/game/menus.c++",
-    "src/game/gamelogic.c++"
+    "src/game/gamelogic.c++",
+    "src/game/classic_trek.c++"
 )
 
 clang++ -std=c++17 -Wall -Wextra -Iinclude -o spacebattlerpg.exe @sources

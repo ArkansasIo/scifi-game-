@@ -733,6 +733,11 @@ void menuScan()
     cout << endl;
 }
 
+void menuClassicTrekMission()
+{
+    classictrek::runMission();
+}
+
 void gameplayMenu()
 {
     static const char *entries[] = {
@@ -746,7 +751,8 @@ void gameplayMenu()
         "Materials",
         "Crafting",
         "Codex",
-        "Sensor sweep"};
+        "Sensor sweep",
+        "Classic Star Trek tactical mission"};
 
     static void (*handlers[])() = {
         menuCargo,
@@ -759,7 +765,8 @@ void gameplayMenu()
         menuMaterials,
         menuCrafting,
         menuCodex,
-        menuScan};
+        menuScan,
+        menuClassicTrekMission};
 
-    runSubMenu("Gameplay", entries, handlers, 11);
+    runSubMenu("Gameplay", entries, handlers, 12);
 }

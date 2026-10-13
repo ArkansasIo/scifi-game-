@@ -21,6 +21,7 @@ the code is put together.
 | Document | Covers |
 | --- | --- |
 | [`GAMELOGIC.md`](GAMELOGIC.md) | Function-by-function reference for `src/game/` |
+| [`CLASSIC_TREK.md`](CLASSIC_TREK.md) | Playable 1979-inspired Star Trek tactical mission, commands and rules |
 | [`UNIVERSE.md`](UNIVERSE.md) | Procedural galaxy generation: stars, worlds, moons, gates, anomalies |
 | [`BIOMES.md`](BIOMES.md) | 28 biomes, terrain features, world detail, and the 20-class taxonomy |
 | [`STARSHIPS.md`](STARSHIPS.md) | 13 hulls, 18 weapons, 34 components, fit validation and fleet maths |
