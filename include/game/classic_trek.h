@@ -4,7 +4,7 @@
 #include <string>
 namespace classictrek {
 enum class Object : char { Empty='.', Star='*', Klingon='K', Starbase='B', Enterprise='E' };
-struct Sector { Object object = Object::Empty; };
+struct Sector { Object object = Object::Empty; int hull = 0; };
 struct Quadrant { std::array<std::array<Sector,8>,8> sectors{}; bool explored=false; };
 struct State {
  std::array<std::array<Quadrant,8>,8> galaxy{};

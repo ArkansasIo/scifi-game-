@@ -9,6 +9,7 @@ differed in exact counts and rules.
 - Starting state: 7 Klingons, 75 stars, 2 starbases, 500 energy and 3 torpedoes.
 - Deadline: 15 stardates. Destroy all Klingons before energy or time runs out.
 - Starbases replenish energy and torpedoes when the Enterprise is adjacent.
+- Klingon retaliation is absorbed by shields first; only penetrating damage reduces ship energy and can damage a system.
 
 ## Commands
 - `NAV dx dy`: move by sector offsets; quadrant crossing costs extra energy and one stardate.
@@ -16,8 +17,8 @@ differed in exact counts and rules.
 - `SRS`: current quadrant sector scan.
 - `LRS`: local 3 × 3 quadrant KBS scan.
 - `DAM`: damage-control report; combat can damage ship systems.
-- `COM option`: library computer reports (0–6: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map, local Klingon contacts).
-- `PHA energy`: spend energy on phasers against local Klingons.
+- `COM option`: library computer reports (0–7: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map, local Klingon contacts, galactic intelligence summary).
+- `PHA energy`: distribute the committed energy across local Klingon contacts; damage decreases with range and each target has a hull value. The impact report shows damage and remaining hull.
 - `TOR row col`: fire at a sector in the current quadrant (coordinates 1–8).
 - `TORC course`: fire a torpedo along a compass course until it hits an object or leaves the quadrant.
 - `SHE energy`: transfer energy into shields.
