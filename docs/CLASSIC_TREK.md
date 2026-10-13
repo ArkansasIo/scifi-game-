@@ -16,7 +16,7 @@ differed in exact counts and rules.
 - `SRS`: current quadrant sector scan.
 - `LRS`: local 3 × 3 quadrant KBS scan.
 - `DAM`: damage-control report; combat can damage ship systems.
-- `COM option`: library computer reports (0–5: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map).
+- `COM option`: library computer reports (0–6: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map, local Klingon contacts).
 - `PHA energy`: spend energy on phasers against local Klingons.
 - `TOR row col`: fire at a sector in the current quadrant (coordinates 1–8).
 - `TORC course`: fire a torpedo along a compass course until it hits an object or leaves the quadrant.
