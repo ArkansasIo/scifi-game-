@@ -13,7 +13,7 @@ differed in exact counts and rules.
 ## Commands
 - `NAV dx dy`: move by sector offsets; quadrant crossing costs extra energy and one stardate.
 - `SRS`: current quadrant sector scan.
-- `LRS`: local 3 × 3 quadrant KBS scan.
+- `LRS`: local 3 × 3 quadrant KBS scan.\n- `DAM`: damage-control report; combat can damage ship systems.\n- `COM option`: library computer reports (0–5: galaxy, status, torpedo help, starbase navigation, direction/distance, quadrant map).
 - `PHA energy`: spend energy on phasers against local Klingons.
 - `TOR row col`: fire at a sector in the current quadrant (coordinates 1–8).
 - `SHE energy`: transfer energy into shields.

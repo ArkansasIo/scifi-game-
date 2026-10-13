@@ -11,6 +11,7 @@ struct State {
  int quadrantX=0, quadrantY=0, sectorX=0, sectorY=0;
  int energy=500, shields=0, torpedoes=3, stardate=0, deadline=15;
  int klingonsRemaining=7, basesRemaining=2;
+ std::array<bool,5> damagedSystems{}; // sensors, computer, phasers, warp drive, torpedo tubes
  unsigned int rngState=1; bool gameOver=false, won=false;
 };
 void initialize(State&, unsigned int seed=1979u);
