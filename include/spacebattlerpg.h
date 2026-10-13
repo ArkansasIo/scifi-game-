@@ -99,5 +99,6 @@ using namespace std;
 #include "game/menus.h"
 #include "game/classic_trek.h"
 #include "game/gameplay.h"
+#include "game/systems.h"
 
 #endif /* SPACEBATTLERPG_H */

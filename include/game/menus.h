@@ -54,6 +54,20 @@ void menuTurnHistory();   // the rolling log
 void menuTurnSteps();     // registered per-turn steps
 void menuScheduledJobs(); // the cronjob roster
 
+/* ---------------- tactical sub-menus ---------------- */
+
+// Engineering: the ship's internal systems and their condition.
+void menuShipSystems();
+
+// Engineering: reactor output, allocation and reserve.
+void menuPowerGrid();
+
+// Gunnery: mounts, fire modes, targets and firing.
+void menuWeapons();
+
+// The interactive, button-driven tactical control panel.
+void menuTacticalControl();
+
 /* ---------------- helpers ---------------- */
 
 // A sub-menu loop: draws a numbered list, dispatches, returns on 0.

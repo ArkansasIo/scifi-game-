@@ -325,7 +325,11 @@ void empireMenu()
         "Ship database",
         "Boss roster",
         "Item browser",
-        "Encounter templates"};
+        "Encounter templates",
+        "Ship systems",
+        "Power grid",
+        "Weapons",
+        "Tactical control"};
 
     static void (*handlers[])() = {
         menuCharacter,
@@ -334,9 +338,13 @@ void empireMenu()
         menuShipDatabase,
         menuBossRoster,
         menuItemBrowser,
-        0};
+        0,
+        menuShipSystems,
+        menuPowerGrid,
+        menuWeapons,
+        menuTacticalControl};
 
-    runSubMenu("Empire", entries, handlers, 7);
+    runSubMenu("Empire", entries, handlers, 11);
 }
 
 /* ---------------- turn sub-menus ---------------- */
@@ -736,6 +744,30 @@ void menuScan()
 void menuClassicTrekMission()
 {
     classictrek::runMission();
+}
+
+/* ---------------- tactical sub-menus ---------------- */
+
+void menuShipSystems()
+{
+    showSystemStatus();
+}
+
+void menuPowerGrid()
+{
+    showPowerGrid();
+    showWeaponStatus();
+}
+
+void menuWeapons()
+{
+    showWeaponStatus();
+    showTargetList();
+}
+
+void menuTacticalControl()
+{
+    runControlPanel();
 }
 
 void gameplayMenu()
