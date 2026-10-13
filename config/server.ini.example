@@ -1,0 +1,9 @@
+[server]
+host=127.0.0.1
+port=27666
+max_sessions=64
+tick_rate=2
+motd=Welcome to Space Battle Wars
+allow_duplicate_names=0
+pvp_enabled=0
+log_level=1

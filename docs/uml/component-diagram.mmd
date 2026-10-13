@@ -1,0 +1,12 @@
+flowchart TB
+  CLI[Terminal UI / CLI] --> Client[Client API]
+  Client --> Protocol[Line Protocol]
+  Protocol --> Server[Authoritative Server Core]
+  Server --> Accounts[Account / Session Module]
+  Server --> Runtime[Game Runtime]
+  Runtime --> Combat[Combat Engine]
+  Runtime --> Progression[Progression Engine]
+  Runtime --> Galaxy[Galaxy / 4X Systems]
+  Runtime --> Scheduler[Turn Scheduler]
+  Runtime --> Content[Data Tables and Lua Content]
+  Runtime --> Persistence[Save / CSV / Database Layer]
