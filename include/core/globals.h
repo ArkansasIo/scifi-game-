@@ -7,7 +7,11 @@
 
 #include "types.h"
 
-extern space       spaceArray[17];
+/* Number of known Star Trek star systems in the space map (spaceArray) and the
+ * 4X layer (systemArray).  Sized with headroom for future additions. */
+#define MAX_SYSTEMS        72
+
+extern space       spaceArray[MAX_SYSTEMS];
 extern Technology  TechnologyArray[17];
 extern upgrads     upgradeArray[17];
 extern ship_item   artifactArray[17];
@@ -43,7 +47,6 @@ extern targetscore targetScore;
 #define MAX_ENCOUNTERS     16
 #define MAX_CAPS           24
 #define MAX_FACTIONS       8
-#define MAX_SYSTEMS        17
 #define MAX_SHIPS          24
 
 /* Identity / label tables. */

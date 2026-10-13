@@ -121,11 +121,11 @@ void menuSystemList()
 
 void menuCurrentSystem()
 {
-    // Both maps are generated: the 4X layer (systemArray, 17 hand-authored
-    // systems) and the procedural universe (systemWorldArray, 32 seeded
-    // systems).  Show the procedural view, since it carries the richer data
-    // (star class, moons, gates, anomalies), and fall back to the 4X list if
-    // the universe has not been generated.
+    // Both maps are generated: the 4X layer (systemArray, MAX_SYSTEMS
+    // hand-authored Star Trek systems) and the procedural universe
+    // (systemWorldArray, 32 seeded systems).  Show the procedural view, since
+    // it carries the richer data (star class, moons, gates, anomalies), and
+    // fall back to the 4X list if the universe has not been generated.
     if (systemWorldCount > 0)
     {
         showSystemWorld(0);

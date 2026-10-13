@@ -33,12 +33,8 @@ void rollPlanet(planet &p, const char *name, int systemTier)
 
 void initializeGalaxy()
 {
-    static const char *systemNames[MAX_SYSTEMS] = {
-        "Aaamazzara", "Altair IV", "Aurelia", "Bajor", "Benthos",
-        "Borg Prime", "Cait", "Cardassia Prime", "Cygnia Minor", "Daran V",
-        "Duronom", "Dytallix B", "Efros", "El-Adrel IV", "Epsilon Caneris III",
-        "Ferenginar", "Finnea Prime"};
-
+    // Names come from the shared Star Trek star-system table in
+    // src/core/universe.c++ so the map, the 4X layer and the menus agree.
     static const char *planetSuffixes[3] = {
         "Prime", "Minor", "Reach"};
 
@@ -49,10 +45,14 @@ void initializeGalaxy()
         starsystem &sys = systemArray[i];
         clearStarSystem(sys);
 
-        strncpy(sys.name, systemNames[i], sizeof(sys.name) - 1);
+        strncpy(sys.name, starSystemNames(i), sizeof(sys.name) - 1);
         sys.name[sizeof(sys.name) - 1] = '\0';
 
-        sys.sectorIndex = i / 4;
+        // Spread the systems evenly across the fixed sector table and clamp
+        // to its size, matching the procedural universe generator.
+        sys.sectorIndex = (i * MAX_SECTORS) / MAX_SYSTEMS;
+        if (sys.sectorIndex >= MAX_SECTORS)
+            sys.sectorIndex = MAX_SECTORS - 1;
         sys.planetCount = 1 + randomNumber(3);
 
         if (sys.planetCount > 6)
@@ -62,7 +62,7 @@ void initializeGalaxy()
         {
             char planetName[30];
             snprintf(planetName, sizeof(planetName), "%s %s",
-                     systemNames[i], planetSuffixes[p % 3]);
+                     starSystemNames(i), planetSuffixes[p % 3]);
 
             rollPlanet(sys.planets[p], planetName, i / 3);
         }

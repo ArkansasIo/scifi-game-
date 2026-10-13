@@ -8,4 +8,8 @@ void initializeqspace();
 void initializeuspace();
 void initializesolspace();
 
+/* Known Star Trek star-system name table (defined in src/core/universe.c++). */
+const char *starSystemNames(int index);
+int starSystemCount(void);
+
 #endif

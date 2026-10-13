@@ -12,9 +12,9 @@
 
 /* ---------------- limits ---------------- */
 
-#define MAX_SHIPCLASSES 48
-#define MAX_COMPONENTS 64
-#define MAX_WEAPONS 32
+#define MAX_SHIPCLASSES 96
+#define MAX_COMPONENTS 160
+#define MAX_WEAPONS 128
 
 /* ---------------- hull classes ---------------- */
 
@@ -52,6 +52,22 @@ enum weapontype
     WTYPE_POINT_DEFENCE,
     WTYPE_TESLA,
     WTYPE_GRAVITON,
+
+    /* --- Star Trek weapon families --- */
+    WTYPE_PHASER,            // Federation phaser arrays and cannons
+    WTYPE_DISRUPTOR,         // Klingon / Romulan / Cardassian disruptors
+    WTYPE_PHOTON_TORPEDO,    // standard photon torpedo
+    WTYPE_QUANTUM_TORPEDO,   // quantum torpedo
+    WTYPE_POLARON,           // Dominion polaron beam
+    WTYPE_PLASMA_TORPEDO,    // Romulan / Gorn plasma torpedo
+    WTYPE_TRANSPHASIC,       // future-Federation transphasic torpedo
+    WTYPE_TRICOBALT,         // tricobalt device
+    WTYPE_CHRONITON,         // chroniton / temporal torpedo
+    WTYPE_ANTIPROTON,        // antiproton beam
+    WTYPE_THALERON,          // Thaleron / thalaron radiation weapon
+    WTYPE_BORG_CUTTING,      // Borg cutting beam
+    WTYPE_BREEN_ENERGY,      // Breen energy-dampening weapon
+    WTYPE_VOTH,              // Vaadwaur / Voth antiproton cannon
     WTYPE_COUNT
 };
 
